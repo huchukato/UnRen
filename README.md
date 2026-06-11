@@ -2,6 +2,8 @@
 
 UnRen for Mac and Linux - Tool for extracting RPA archives and decompiling Ren'Py RPYC files.
 
+<img width="942" height="792" alt="UnRen" src="https://github.com/user-attachments/assets/b7cc4294-225e-4851-9aa6-2bdd92d5bd43" />
+
 ## What's New in v0.9.0
 
 **Major Upgrade - Python 3 Compatibility**
