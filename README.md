@@ -1,8 +1,19 @@
-# UnRen v0.9.0 - Python 3 Version
+# 🎮 UnRen v0.9.1 - Python 3 Version
 
-UnRen for Mac and Linux - Tool for extracting RPA archives and decompiling Ren'Py RPYC files.
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+**UnRen for Mac and Linux** - Tool for extracting RPA archives and decompiling Ren'Py RPYC files.
 
 <img width="942" height="792" alt="UnRen" src="https://github.com/user-attachments/assets/b7cc4294-225e-4851-9aa6-2bdd92d5bd43" />
+
+## What's New in v0.9.1
+
+**New Feature - URM Support**
+
+- **URM Copy**: Added option to copy Universal Ren'Py Mod (URM) to game folder
+- **Menu Option 77**: New menu option to easily copy URM.rpa to game directory
 
 ## What's New in v0.9.0
 
@@ -59,7 +70,7 @@ Edit the Configuration section in `UnRen.command` (line 72):
 ```bash
 # Optional: Ren'Py SDK path for decompiler
 # If not set, decompiler will ask for path interactively
-renpy_sdk_path="/Volumes/NVME/dev-ai/RenPy-Proj/renpy-8.5.3-sdk"
+renpy_sdk_path="/path/to/renpy-sdk"
 ```
 
 #### Method 2: Interactive Input
@@ -71,14 +82,14 @@ Ren'Py SDK path not configured in the Configuration section.
 Please enter the path to your Ren'Py SDK (or press Enter to skip):
 ```
 
-Enter the full path to your Ren'Py SDK (e.g., `/Volumes/NVME/dev-ai/RenPy-Proj/renpy-8.5.3-sdk`).
+Enter the full path to your Ren'Py SDK (e.g., `/path/to/renpy-sdk`).
 
 #### Method 3: System PATH
 
 You can add the Ren'Py SDK to your system PATH:
 
 ```bash
-export PATH="/Volumes/NVME/dev-ai/RenPy-Proj/renpy-8.5.3-sdk:$PATH"
+export PATH="/path/to/renpy-sdk:$PATH"
 ```
 
 ### Other Configuration Parameters
@@ -115,6 +126,7 @@ After selecting the game, you'll see the main menu with the following options:
 7. **Skip Unread Text** - Enable skipping unread text
 8. **Rollback Anywhere** - Enable rollback anywhere
 9. **Open Game Folder** - Open game folder
+77. **Copy URM to game folder** - Copy Universal Ren'Py Mod to game
 10. **Quit** - Exit the script
 
 ## Features
@@ -225,6 +237,7 @@ UnRen v0.9.0/
 - **Based on**: UnRen.bat by Sam @ www.f95zone.to
 - **rpatool**: https://codeberg.org/shiz/rpatool
 - **unrpyc**: https://github.com/CensoredUsername/unrpyc
+- **URM (Universal Ren'Py Mod)**: https://f95zone.to/threads/universal-renpy-mod-urm-2-6-2-mod-any-renpy-game-yourself.48025/
 
 ## License
 
@@ -232,17 +245,4 @@ See individual LICENSE files for rpatool and unrpyc for license information.
 
 ## Changelog
 
-### v0.9.0
-- Major upgrade: Updated to Python 3
-- Updated to unrpyc v2.x (Python 3)
-- Updated rpatool for Python 3
-- Added Ren'Py SDK configuration
-- Interactive input for SDK path
-- Improved decompiler warnings
-- Verbose output for RPA extraction
-
-### v0.8.2
-- Switch shell back to bash
-- Various fixes and improvements
-
-(For complete changelog of previous versions, see comments in UnRen.command file)
+See [CHANGELOG.md](CHANGELOG.md) for the complete version history.

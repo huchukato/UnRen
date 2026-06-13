@@ -79,7 +79,7 @@
 
 ARG1=$1
 num_args=$#
-version="0.9.0"
+version="0.9.1"
 # Aggiungi Ren'Py SDK al PYTHONPATH se configurato
 if [ -n "$renpy_sdk_path" ]; then
     export PYTHONPATH="$renpy_sdk_path:$PYTHONPATH"
@@ -154,6 +154,7 @@ function menu
         echo "  6) Force enable skipping of unseen content"
         echo "  7) Force enable rollback (scroll wheel)"
         echo "  8) Open game directory"
+        echo "  77) Copy URM to game folder"
         echo
         echo "  88) Options 4-7 (no overwrite)"
         echo "  99) Options 1-7 (no overwrite)"
@@ -192,6 +193,9 @@ function choice
     "8")
         opengame
         ;;
+    "77")
+        copyurm
+        ;;
     "88")
         console
         quick
@@ -219,6 +223,17 @@ function choice
 function opengame
 {
     open "$game"
+}
+
+function copyurm
+{
+    urm_source=`dirname "$0"`"/UnRen Tools/0x52_URM.rpa"
+    if [ -e "$urm_source" ]; then
+        cp "$urm_source" "$game/"
+        echo "URM copied to game folder"
+    else
+        echo "Error: URM file not found at $urm_source"
+    fi
 }
 
 function extract
