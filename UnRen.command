@@ -80,6 +80,18 @@
 ARG1=$1
 num_args=$#
 version="0.9.1"
+
+# Rileva il sistema operativo per il comando di apertura
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    OPEN_CMD="open"
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Linux
+    OPEN_CMD="xdg-open"
+else
+    OPEN_CMD="open"
+fi
+
 # Aggiungi Ren'Py SDK al PYTHONPATH se configurato
 if [ -n "$renpy_sdk_path" ]; then
     export PYTHONPATH="$renpy_sdk_path:$PYTHONPATH"
@@ -222,7 +234,7 @@ function choice
 
 function opengame
 {
-    open "$game"
+    $OPEN_CMD "$game"
 }
 
 function copyurm

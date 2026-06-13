@@ -3,6 +3,8 @@
 ### v0.9.1
 - Added option to copy URM (Universal Ren'Py Mod) to game folder
 - Added URM credits and documentation
+- Added automatic OS detection for cross-platform support (Linux/macOS)
+- Now uses xdg-open on Linux and open on macOS for opening directories
 
 ### v0.9.0
 - Major upgrade: Updated to Python 3

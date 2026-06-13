@@ -15,6 +15,11 @@
 - **URM Copy**: Added option to copy Universal Ren'Py Mod (URM) to game folder
 - **Menu Option 77**: New menu option to easily copy URM.rpa to game directory
 
+**Cross-Platform Improvements**
+
+- **Linux Compatibility**: Added automatic OS detection for cross-platform support
+- **Open Command**: Now uses `xdg-open` on Linux and `open` on macOS
+
 ## What's New in v0.9.0
 
 **Major Upgrade - Python 3 Compatibility**
@@ -211,7 +216,7 @@ ls "UnRen Tools/"
 ## File Structure
 
 ```
-UnRen v0.9.0/
+UnRen/
 ├── UnRen.command              # Main script
 ├── README.md                  # This file
 └── UnRen Tools/
